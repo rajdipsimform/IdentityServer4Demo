@@ -1,0 +1,15 @@
+﻿@model List<WeatherModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<table class="table table-striped">
+    @foreach (var weather in Model)
+    {
+        <tr>
+            <td>@weather.Date</td>
+            <td>@weather.Summary</td>
+            <td>@weather.TemperatureC</td>
+            <td>@weather.TemperatureF</td>
+        </tr>
+    }
+</table>
